@@ -76,7 +76,7 @@ const Overview = () => {
                 May 2025: AI risk prediction model updated for improved accuracy
               </p>
 
-              <Link href='/updates' className='text-sm sm:text-base md:text-lg font-georgia 2xl:text-xl text-[#378480] font-semibold hover:underline'>
+              <Link href='/latestupdates' className='text-sm sm:text-base md:text-lg font-georgia 2xl:text-xl text-[#378480] font-semibold hover:underline'>
                 View All Updates →
               </Link>
 

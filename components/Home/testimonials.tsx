@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     role: "Student, BE Computer",
     quote:
       "As an engineering student under constant pressure, Serenica became my go-to tool. The AI suggestions were surprisingly accurate and the interface is very calming.",
-    image: "images/image5.webp",
+    image: "images/image5.jpg",
   },
 ];
 

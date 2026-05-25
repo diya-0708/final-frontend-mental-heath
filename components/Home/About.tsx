@@ -85,7 +85,7 @@ export default function About() {
 
           {/* CTA Button */}
           <Link
-            href="#services"
+            href="/services"
             className="inline-block bg-[#e8927c] hover:bg-[#d4785f] text-white text-sm font-bold tracking-wide px-8 py-3 rounded-full transition-colors duration-300"
           >
             Explore our Services
