@@ -1,26 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+html {
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* ── Brand Colors ── */
+  --color-brand-navy: #1a3a6b;
+  --color-brand-navy-light: #1a4a8a;
+  --color-brand-navy-deep: #0d1f3c;
+  --color-brand-navy-dark: #0f142e;
+  --color-brand-gold: #c8922a;
+  --color-brand-gold-light: #f5e6c8;
+  --color-brand-light: #f8f9fb;
+  --color-brand-white: #ffffff;
+  --color-brand-blue-pro: #1e40af;
+  --color-brand-amber: #c8922a;
+
+
+  /* ── Brand Fonts ── */
+  --font-brand-serif: "Georgia", "Times New Roman", serif;
+    --font-brand-serif-pro: "Georgia", "Times New Roman", serif,"italic";
+
+  --font-brand-sans: "Inter", system-ui, sans-serif;
+  --font-brand-garamond:"EB Garamond", serif;
+  --font-brand-display:"Josefin Sans", sans-serif;
+
+  /* ── Brand Border Radius ── */
+  --radius-brand-sm: 0.75rem;
+  --radius-brand: 1rem;
+  --radius-brand-lg: 1.5rem;
+
+  /* ── Brand Shadows ── */
+  --shadow-brand: 0 2px 12px 0 rgba(26, 58, 107, 0.08);
+  --shadow-brand-lg: 0 8px 32px 0 rgba(26, 58, 107, 0.15);
+
+  /* ── Brand Spacing ── */
+  --spacing-section: 5rem;
+  --spacing-section-lg: 7rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+   BRAND UTILITY CLASSES
+   Use these in your components instead of hardcoded values
+   ============================================================ */
+
+/* Colors */
+.text-brand-navy       { color: var(--color-brand-navy); }
+.text-brand-gold       { color: var(--color-brand-gold); }
+.text-brand-light      { color: var(--color-brand-light); }
+.bg-brand-navy         { background-color: var(--color-brand-navy); }
+.bg-brand-navy-deep    { background-color: var(--color-brand-navy-deep); }
+.bg-brand-navy-dark    { background-color: var(--color-brand-navy-dark); }
+.bg-brand-gold         { background-color: var(--color-brand-gold); }
+.bg-brand-light        { background-color: var(--color-brand-light); }
+.border-brand-navy     { border-color: var(--color-brand-navy); }
+.border-brand-gold     { border-color: var(--color-brand-gold); }
+.border-brand-amber    { border-color: var(--color-brand-amber); }
+
+/* Fonts */
+.font-brand-serif      { font-family: var(--font-brand-serif); }
+.font-brand-sans       { font-family: var(--font-brand-sans); }
+.font-brand-garamond   { font-family: var(--font-brand-garamond); }
+.font-brand-display    { font-family: var(--font-brand-display); }
+
+/* Border radius */
+.rounded-brand-sm      { border-radius: var(--radius-brand-sm); }
+.rounded-brand         { border-radius: var(--radius-brand); }
+.rounded-brand-lg      { border-radius: var(--radius-brand-lg); }
+
+/* Shadows */
+.shadow-brand          { box-shadow: var(--shadow-brand); }
+.shadow-brand-lg       { box-shadow: var(--shadow-brand-lg); }
+
+/* ── Hover utilities ── */
+.hover\:bg-brand-gold:hover    { background-color: var(--color-brand-gold); }
+.hover\:bg-brand-navy:hover    { background-color: var(--color-brand-navy); }
+.hover\:text-brand-gold:hover  { color: var(--color-brand-gold); }
+.hover\:text-brand-navy:hover  { color: var(--color-brand-navy); }
+.hover\:bg-brand-blue-pro:hover { background-color: var(--color-brand-blue-pro); }
+/* ============================================================
+   EXISTING FONT CLASSES — kept as is
+   ============================================================ */
+
+.font-georgia {
+  font-family: 'Georgia', serif;
 }
+
+
+.font-garamond {
+  font-family: 'EB Garamond', serif;
+}
+
+
+.font-tempus {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* ============================================================
+   CUSTOM FONTS
+   ============================================================ */
+
+@font-face {
+  font-family: 'Souvenir';
+  src: url('/fonts/Souvenir-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand-garamond);
+}
+
+html {
+  scroll-behavior: smooth;
 }
